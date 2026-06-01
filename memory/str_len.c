@@ -2,13 +2,11 @@
 #include <stdlib.h>
 size_t my_strlen(const char *str)
 {
-    char* temp=str;
+ const char* temp=str;
    while(*temp!='\0')
-   {
     temp++;
-
-   }
-   printf("str len is %zu", temp-str);
+   size_t len=(size_t)(temp-str);
+   printf("str len is %zu", len);
    return temp-str;
 }
 int main()
